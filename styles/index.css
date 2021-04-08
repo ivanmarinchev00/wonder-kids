@@ -44,4 +44,18 @@ form {
     }
     
   }
-   */ 
+   */
+   .container-fluid{
+       margin: 5vmin; 
+   } 
+   
+   .btn{
+       margin: 3vmin;
+       width: 30%;
+   }
+
+   @media(max-width: 576px){
+    .btn{
+        width: 50%;
+    }
+   }

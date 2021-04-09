@@ -1,3 +1,5 @@
+import Select from './select.js'
+
 //Nothing yet!
 //See if the browser supports Service Workers, if so try to register one
 if("serviceWorker" in navigator){
@@ -12,4 +14,12 @@ if("serviceWorker" in navigator){
     //The registration of the service worker failed
     console.log("Browser: I don't support Service Workers :(");
   }
+
+  //dropdown select
+const selectedElement = document.querySelectorAll('[data-custom]')
+
+selectedElement.forEach(selectedElement => {
+new Select(selectedElement)
+})
+
 

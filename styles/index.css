@@ -54,8 +54,42 @@ form {
        width: 30%;
    }
 
+   .sign{
+    font-family: 'Kaushan Script', cursive;
+    font-size: 7vmin;
+    margin: 5%;
+    color: purple;
+   }
+
+   body{
+       
+       background-image: url("../assets/26275.jpg");
+       background-position: center;
+       background-repeat: repeat-y;
+       background-size: cover;
+       height: 100%;
+   }
+
    @media(max-width: 576px){
     .btn{
+        background-color: #45818e !important;
         width: 50%;
+        margin: 7%;
+    }
+    .sign{
+        font-size: 9vmin;
+       
+    }
+   }
+   @media(max-width: 700px){
+    .btn{
+        width: 65%;
+        margin: 9%;
+    }
+    .container-fluid{
+        margin-top: 10%;
+    }
+    .sign{
+        margin-bottom: 20%;
     }
    }

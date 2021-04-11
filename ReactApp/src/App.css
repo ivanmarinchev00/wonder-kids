@@ -1,4 +1,4 @@
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -34,5 +34,57 @@
   }
   to {
     transform: rotate(360deg);
+  }
+} */
+.container-fluid {
+  /* margin: 5vmin; */
+  align-items: center;
+  justify-content: center;
+}
+
+.btn {
+  margin: 3vmin;
+  width: 30%;
+}
+
+.sign {
+  font-family: "Kaushan Script", cursive;
+  font-size: 7vmin;
+  margin: 5%;
+  color: purple;
+}
+
+body {
+  background-image: url("../src/images/26275.jpg");
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+}
+
+@media (max-width: 576px) {
+  .btn {
+    background-color: #45818e !important;
+    width: 50%;
+    margin: 7%;
+  }
+
+  .sign {
+    font-size: 9vmin;
+    /* margin: 10% !important; */
+  }
+}
+@media (max-width: 700px) {
+  .btn {
+    width: 65%;
+    margin: 9%;
+  }
+  .container-fluid {
+    height: 100%;
+    /* margin-top: 10%; */
+  }
+  .sign {
+    margin: 20%;
   }
 }

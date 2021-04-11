@@ -6,6 +6,7 @@ import ConversationsComponent from "./Components/ConversationsComponent.js"
 import GameComponent from "./Components/GameComponent.js"
 import LoginComponent from "./Components/LoginComponent.js"
 import RegisterComponent from "./Components/RegisterComponent.js"
+import MenuComponent from './Components/MenuComponent';
 
 
 function App() {
@@ -15,6 +16,9 @@ function App() {
     <Route exact path ="/">
     <LoginComponent />
     </Route> 
+    <Route path="/menu">
+    <MenuComponent/>
+    </Route>
     <Route path = "/chat">
       <ChatComponent/>
     </Route>

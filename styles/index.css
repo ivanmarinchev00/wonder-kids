@@ -70,6 +70,10 @@ form {
        height: 100%;
    }
 
+   .custom-select-container{
+        
+   }
+
    @media(max-width: 576px){
     .btn{
         background-color: #45818e !important;

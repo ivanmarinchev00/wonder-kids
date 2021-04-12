@@ -75,7 +75,11 @@ body {
     /* margin: 10% !important; */
   }
 }
-@media (max-width: 700px) {
+.article-image {
+  width: 30vmin;
+  height: 20vmin;
+}
+@media only screen and (max-width: 376px) {
   .btn {
     width: 65%;
     margin: 9%;
@@ -85,6 +89,57 @@ body {
     /* margin-top: 10%; */
   }
   .sign {
-    margin: 20%;
+    margin-top: 20%;
+    margin-bottom: 20%;
   }
+  .article-image {
+    width: 60vmin;
+    height: 40vmin;
+  }
+
+  .card-text {
+    letter-spacing: 0px !important;
+    width: 100% !important;
+    margin-left: 0% !important;
+  }
+}
+
+.vertical-center {
+  min-height: 100%; /* Fallback for browsers do NOT support vh unit */
+  min-height: 100vh; /* These two lines are counted as one :-)       */
+
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.vertical-center > .article-container {
+  height: 100%;
+  display: table;
+  width: 100%;
+  padding: 0;
+}
+
+.card {
+  background-color: #fff;
+  display: initial;
+  width: 30%;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+
+}
+
+select {
+  margin: 3vmin;
+}
+
+.card-text {
+  width: 60%;
+  margin-left: 20%;
+  font-size: 15px;
+  background-color: white; 
+  border-radius: 7%;
+  margin-top: 4%;
+  letter-spacing: 3px;
 }

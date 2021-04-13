@@ -9,8 +9,10 @@ import RegisterComponent from "./Components/RegisterComponent.js"
 import MenuComponent from './Components/MenuComponent';
 
 
+
 function App() {
   return (
+
     
     <Router >
     <Route exact path ="/">

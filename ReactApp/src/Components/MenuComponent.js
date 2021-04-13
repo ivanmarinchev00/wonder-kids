@@ -1,8 +1,5 @@
-<<<<<<< HEAD
-=======
 import Button from 'react-bootstrap/Button';
 import {Link} from 'react-router-dom';
->>>>>>> 285268e5cecfc9ebeb765a3e51fe36558a1c557c
 
 const MenuComponent = props => {
 return (

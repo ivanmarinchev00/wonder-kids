@@ -8,15 +8,12 @@
     "@testing-library/user-event": "^12.8.3",
     "axios": "^0.21.1",
     "bootstrap": "^4.6.0",
-    "firebase": "^8.3.3",
+    "firebase": "^8.4.1",
     "react": "^17.0.2",
     "react-bootstrap": "^1.5.2",
     "react-dom": "^17.0.2",
-<<<<<<< HEAD
     "react-geocode": "^0.2.3",
-=======
     "react-icons": "^4.2.0",
->>>>>>> 285268e5cecfc9ebeb765a3e51fe36558a1c557c
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "web-vitals": "^1.1.1"

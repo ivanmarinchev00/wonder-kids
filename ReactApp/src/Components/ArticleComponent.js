@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from "react";
 import SliderData from "../Components/SliderData.js";
-import img from "../images/3637164.jpg";
 import firebase from "firebase/app";
-import axios from "axios";
 
 const ArticleComponent = (props) => {
-  const [input, setInput] = useState("chemistry");
+  const [input, setInput] = useState('chemistry');
   const [articleIndex, setArticleIndex] = useState(0);
   const [articleTitle, setArticleTitle] = useState('');
   const [articleContent, setArticleContent] = useState('');
@@ -25,7 +23,7 @@ const ArticleComponent = (props) => {
       try{
         dataArticles = [...dataArticles, article];
         setArticles(dataArticles); // use the useState articles 
-        console.log(articles.length);
+        console.log("ARTICLESS" + articles);
         setArticleTitle(articles[articleIndex].data().title);
         setArticleContent(articles[articleIndex].data().content)
         setArticleImage(articles[articleIndex].data().img) 
@@ -35,7 +33,7 @@ const ArticleComponent = (props) => {
       }
        
     });
-    return dataArticles;
+    // return dataArticles;
   };
 
 
@@ -49,12 +47,14 @@ const ArticleComponent = (props) => {
   }
 
   const onIndexIncreaseHandler = () => {
+    if(articleIndex === 1) return
     setArticleIndex(articleIndex + 1);
-    console.log(articles)
+    // console.log(articles)
     // setArticleTitle(articles[articleIndex].data().title)
   }
 
   const onIndexDecreaseHandler = () => {
+    if(articleIndex === 0) return
     setArticleIndex(articleIndex - 1);
   }
 
@@ -64,38 +64,47 @@ const ArticleComponent = (props) => {
   //   }
   // })
 
-  return (
-    <div className="jumbotron vertical-center">
-      <div className="article-container">
-        <select
-          name="topic"
-          id="topic"
-          onChange={onChangeHandler}
-          value={input}
-        >
-          <option value="chemistry" >Chemistry</option>
-          <option value="biology">Biology</option>
-          <option value="geography">Geography</option>
-          <option value="history">History</option>
-        </select>
-        {SliderData.map((slide, index) => {
-          return (
-            <div className="card text-center" key={index}>
-              <div className="overflow">
-                <img src={articleImage} alt="article image" className="article-image" />
+  if(articles.length === 0) return <h1>Loading...</h1>
+
+    
+
+  else{
+    return (
+      <div className="jumbotron vertical-center">
+        <div className="article-container">
+          <select
+            name="topic"
+            id="topic"
+            onChange={onChangeHandler}
+            // value={input}
+          >
+            <option value="chemistry" >Chemistry</option>
+            <option value="biology">Biology</option>
+            <option value="geography">Geography</option>
+            <option value="history">History</option>
+          </select>
+          {SliderData.map((slide, index) => {
+            console.log("FIRST")
+            return (
+              <div className="card text-center" key={index}>
+                <div className="overflow">
+                  <img src={articleImage} alt="article image" className="article-image" />
+                </div>
+                <div className="card-body text-dark">
+                  <h4 className="card-title">{articleTitle}</h4>
+                  <p className="card-text text-secondary">{articleContent}</p>
+                </div>
               </div>
-              <div className="card-body text-dark">
-                <h4 className="card-title">{articleTitle}</h4>
-                <p className="card-text text-secondary">{articleContent}</p>
-              </div>
-            </div>
-          );
-        })}
-        <button id="goLeft" onClick={onIndexDecreaseHandler}>{`<`}</button>
-        <button id="goRight" onClick={onIndexIncreaseHandler}>{`>`}</button>
+            );
+          })}
+          <button id="goLeft" onClick={onIndexDecreaseHandler}>{`<`}</button>
+          <button id="goRight" onClick={onIndexIncreaseHandler}>{`>`}</button>
+        </div>
       </div>
-    </div>
-  );
+    );
+  }
+
+  
 };
 
 export default ArticleComponent;

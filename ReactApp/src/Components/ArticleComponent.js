@@ -10,29 +10,52 @@ const ArticleComponent = (props) => {
   const [articleTitle, setArticleTitle] = useState('');
   const [articleContent, setArticleContent] = useState('');
   const [articleImage, setArticleImage] = useState('');
+  const [articles, setArticles] = useState([])
+  var dataArticles = []
 
   const db = firebase.firestore();
 
   // var articleRef = db.collection("articles").doc(input)
 
   const fetchArticles = async () => {
-    const response = db.collection("articles").doc(input).collection("articles");
+    const response = await db.collection("articles").doc(input).collection("articles");
     const data = await response.get();
+    console.log("INPUT HEREE" + input);
     data.docs.forEach((article) => {
-      console.log("HEREEEE" + input);
-      setArticleTitle(article.data().title);
-      setArticleContent(article.data().content)
-      setArticleImage(article.data().img)
+      try{
+        dataArticles = [...dataArticles, article];
+        setArticles(dataArticles); // use the useState articles 
+        console.log(articles.length);
+        setArticleTitle(articles[articleIndex].data().title);
+        setArticleContent(articles[articleIndex].data().content)
+        setArticleImage(articles[articleIndex].data().img) 
+      }
+      catch(e){
+        console.log(e);
+      }
+       
     });
+    return dataArticles;
   };
+
 
   useEffect(() => {
     fetchArticles();
-  }, [input]);
+  }, [input, articleIndex]);
 
   const onChangeHandler = (event) => {
       // console.log(input);
       setInput(event.target.value);
+  }
+
+  const onIndexIncreaseHandler = () => {
+    setArticleIndex(articleIndex + 1);
+    console.log(articles)
+    // setArticleTitle(articles[articleIndex].data().title)
+  }
+
+  const onIndexDecreaseHandler = () => {
+    setArticleIndex(articleIndex - 1);
   }
 
   // articleRef.get().then(doc => {
@@ -68,8 +91,8 @@ const ArticleComponent = (props) => {
             </div>
           );
         })}
-        <button id="goLeft">{`<`}</button>
-        <button id="goRight">{`>`}</button>
+        <button id="goLeft" onClick={onIndexDecreaseHandler}>{`<`}</button>
+        <button id="goRight" onClick={onIndexIncreaseHandler}>{`>`}</button>
       </div>
     </div>
   );

@@ -1,0 +1,21 @@
+body {
+    background-image: url("./123.png");
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+  }
+
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+.grid-item{
+  justify-self: center;
+  font-size: 1.5em;
+  text-shadow: 1px 1px #6e5d5d;
+  
+}

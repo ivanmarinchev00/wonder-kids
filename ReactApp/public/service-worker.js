@@ -1,7 +1,10 @@
 const cacheName="static_cache_1";
 const appFiles=[
-	"manifest.json",
-	"error.html"
+	"./manifest.json",
+	"./error.html",
+  "./error.css",
+  "./123.png",
+  "./logo.png"
 ];
 
 

@@ -1,7 +1,13 @@
 import Button from 'react-bootstrap/Button';
-import {Link} from 'react-router-dom';
+import {Link,withRouter} from 'react-router-dom';
 
 const MenuComponent = props => {
+
+    const handleLogout = e =>{
+        props.history.push("/")
+        sessionStorage.clear()
+    }
+
 return (
 <div class="container-fluid ">
         <div class="row justify-content-center">
@@ -9,29 +15,28 @@ return (
                 Ready to learn and have fun?</h2>
         </div>
 
-        <Link to="articles">
+        <Link className="link" to="articles">
         <div class="row justify-content-center">
             <button type="button" className="btn-primary btn-lg btn">Articles</button>
         </div>
         </Link>   
         
-        <Link to="/game">
+        <Link className="link" to="/game">
         <div class="row justify-content-center">
             <button type="button" className="btn-primary btn-lg btn">Play Game</button>
         </div>
         </Link>
 
-        <Link to="/conversations">
+        <Link className="link" to="/conversations">
         <div class="row justify-content-center">
             <button type="button" className="btn-primary btn-lg btn">Conversations</button>
         </div>
         </Link>
 
-        <Link to="logout">
+      
         <div class="row justify-content-center">
-            <button type="button" className="btn-primary btn-lg btn">Logout</button>
+            <button type="button" className="btn-primary btn-lg btn" onClick = {handleLogout}>Logout</button>
         </div>
-        </Link>
 
        
         
@@ -40,4 +45,4 @@ return (
     </div>
 )
 }
-export default MenuComponent;
+export default withRouter(MenuComponent);

@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from 'react-router-dom'
 import SliderData from "../Components/SliderData.js";
-import img from "../images/3637164.jpg";
 import firebase from "firebase/app";
-import axios from "axios";
 
 const ArticleComponent = (props) => {
   const [input, setInput] = useState("chemistry");
@@ -15,8 +13,6 @@ const ArticleComponent = (props) => {
   var dataArticles = [];
 
   const db = firebase.firestore();
-
-  // var articleRef = db.collection("articles").doc(input)
 
   const fetchArticles = async () => {
     const response = await db
@@ -45,25 +41,20 @@ const ArticleComponent = (props) => {
   }, [input, articleIndex]);
 
   const onChangeHandler = (event) => {
-    // console.log(input);
     setInput(event.target.value);
   };
 
   const onIndexIncreaseHandler = () => {
+    if(articleIndex === 1) return
     setArticleIndex(articleIndex + 1);
     console.log(articles)
-    // setArticleTitle(articles[articleIndex].data().title)
   };
 
   const onIndexDecreaseHandler = () => {
+    if(articleIndex === 0) return
     setArticleIndex(articleIndex - 1);
   };
 
-  // articleRef.get().then(doc => {
-  //   if(doc.exists){
-  //     console.log("WE MADE IT")
-  //   }
-  // })
 
   return (
     <div>

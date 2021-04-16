@@ -72,7 +72,7 @@ const ArticleComponent = (props) => {
   </Link>
   <div className="jumbotron vertical-center">
      
-      <div className="article-container">
+      <div className="container">
         <select
           name="topic"
           id="topic"
@@ -86,7 +86,7 @@ const ArticleComponent = (props) => {
         </select>
         {SliderData.map((slide, index) => {
           return (
-            <div className="card text-center" key={index}>
+            <div className="row card text-center" key={index}>
               <div className="overflow">
                 <img
                   src={articleImage}
@@ -94,7 +94,7 @@ const ArticleComponent = (props) => {
                   className="article-image"
                 />
               </div>
-              <div className="card-body text-dark">
+              <div className="col-12 card-body text-dark">
                 <h4 className="card-title">{articleTitle}</h4>
                 <p className="card-text text-secondary">{articleContent}</p>
               </div>

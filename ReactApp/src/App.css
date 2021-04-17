@@ -44,7 +44,6 @@
 
 .btn {
   margin: 3vmin;
-  width: 30%;
   background-color: #45818e
 }
 
@@ -134,8 +133,8 @@ body {
 
 .card {
   background-color: #fff;
-  display: initial;
-  width: 30%;
+  /* display: initial; */
+  width: 60%;
   align-items: center;
   justify-content: center;
   vertical-align: middle;

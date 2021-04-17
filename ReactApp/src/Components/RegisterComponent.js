@@ -51,18 +51,18 @@ const RegisterComponent = props => {
             </div>
             <form onSubmit={handleSubmit}>
                 <div class="form-group row justify-content-md-center justify-content-center">
-                    <div class="col-10 mt-4 col-sm-6 col-md-4 col-lg-12">
+                    <div class="col-lg-12 mt-4 col-sm-6 col-md-10">
                         <input type="email" class="form-control" id="inputEmail3" placeholder="Email" onChange={e => setEmail(e.target.value)} />
                     </div>
                 </div>
                 <div class="form-group row justify-content-md-center justify-content-center">
-                    <div class="col-10 mt-4 col-sm-6 col-md-4 col-lg-12">
+                    <div class="col-lg-12 mt-4 col-sm-6 col-md-10">
                         <input type="password" class="form-control" id="inputPassword3" placeholder="Password" onChange={e => setPassword(e.target.value)} />
                     </div>
                 </div>
 
                 <div class="form-group row justify-content-md-center justify-content-center">
-                    <div class="col-10 mt-4 col-sm-6 col-md-4 col-lg-12">
+                    <div class="col-lg-12 mt-4 col-sm-6 col-md-10">
                         <input type="password" class="form-control" id="inputPassword3" placeholder="Conf Password" onChange={e => setCPassword(e.target.value)} />
                     </div>
                 </div>
@@ -75,7 +75,7 @@ const RegisterComponent = props => {
 
                 <div class="form-group row justify-content-md-center justify-content-center">
                     <div class="col-12 mt-4">
-                        <a href="/login" class="link-primary text-center">You have an account. Then login!</a>
+                        <a href="/" class="link-primary text-center">You have an account. Then login!</a>
                     </div>
                 </div>
             </form>

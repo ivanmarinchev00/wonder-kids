@@ -17,25 +17,25 @@ return (
 
         <Link className="link" to="articles">
         <div class="row justify-content-center">
-            <button type="button" className=" col-lg-4 col-md-4 col-sm-2 btn-primary btn-lg btn">Articles</button>
+            <button type="button" className="col-8 col-lg-4 col-md-4 col-sm-2 btn-primary btn-lg btn">Articles</button>
         </div>
         </Link>   
         
         <Link className="link" to="/game">
         <div class="row justify-content-center">
-            <button type="button" className=" col-lg-4 col-md-4 col-sm-2 btn-primary btn-lg btn">Play Game</button>
+            <button type="button" className="col-8 col-lg-4 col-md-4 col-sm-2 btn-primary btn-lg btn">Play Game</button>
         </div>
         </Link>
 
         <Link className="link" to="/conversations">
         <div class="row justify-content-center">
-            <button type="button" className="col-lg-4 col-md-4 col-sm-2 btn-primary btn-lg btn">Conversations</button>
+            <button type="button" className="col-8 col-lg-4 col-md-4 col-sm-2 btn-primary btn-lg btn">Conversations</button>
         </div>
         </Link>
 
       
         <div class="row justify-content-center">
-            <button type="button" className="col-lg-4 col-md-4 col-sm-2 btn-primary btn-lg btn" onClick = {handleLogout}>Logout</button>
+            <button type="button" className="col-8 col-lg-4 col-md-4 col-sm-2 btn-primary btn-lg btn" onClick = {handleLogout}>Logout</button>
         </div>
 
        

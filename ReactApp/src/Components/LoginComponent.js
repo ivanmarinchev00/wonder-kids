@@ -35,12 +35,12 @@ const LoginComponent = (props) => {
       </div>
       <form onSubmit={handleSubmit}>
         <div className="form-group row justify-content-md-center justify-content-center">
-          <div className="col-lg-12 mt-4 col-md-8 col-sm-4 ">
+          <div className="col-lg-12 mt-4 col-md-8 col-sm-8 xs-2">
             <input type="email" class="form-control" id="inputEmail3" placeholder="Email" onChange={e => setEmail(e.target.value)} />
           </div>
         </div>
         <div className="form-group row justify-content-md-center justify-content-center">
-          <div className="col-lg-12 mt-4 col-md-8 col-sm-4">
+          <div className="col-lg-12 mt-4 col-md-8 col-sm-8 xs-2">
             <input type="password" class="form-control" id="inputPassword3" placeholder="Password" onChange={e => setPassword(e.target.value)} />
           </div>
         </div>

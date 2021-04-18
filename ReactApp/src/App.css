@@ -43,7 +43,7 @@
 }
 
 .btn {
-  margin: 3vmin;
+  margin: 8vmin;
   background-color: #45818e
 }
 
@@ -82,10 +82,10 @@ body {
   border-radius: 3%;
 }
 @media only screen and (max-width: 320px) {
-  .btn {
+  /* .btn {
     width: 65%;
     margin: 9%;
-  }
+  } */
   .container-fluid {
     height: 100%;
     /* margin-top: 10%; */

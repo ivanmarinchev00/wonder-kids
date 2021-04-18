@@ -57,8 +57,8 @@ const ArticleComponent = (props) => {
 
   return (
     <div className="container">
-      <div className="row my-row justify-content-between">
-        <div className="col-lg-1 col-md-2 col-sm-1 col-xs-2">
+      <div className="row my-row justify-content-sm-center">
+        <div className="col-lg-5 colg-md-4 col-sm-3 col-4">
           <Link to="/menu">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -73,7 +73,7 @@ const ArticleComponent = (props) => {
           </Link>
         </div>
 
-        <div className="col-lg-7 col-md-6 col-sm-4 col-xs-6">
+        <div className="col-lg-7 col-md-6 col-sm-5 col-4">
           <select
             name="topic"
             id="topic"

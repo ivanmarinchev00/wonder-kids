@@ -43,7 +43,12 @@
 }
 
 .btn {
-  margin: 8vmin;
+  margin: 5vmin;
+  background-color: #45818e
+}
+
+.btnMenu{
+  margin: 10vmin;
   background-color: #45818e
 }
 
